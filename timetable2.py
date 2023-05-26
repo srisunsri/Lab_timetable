@@ -6,7 +6,7 @@ document=Document()
 section = document.sections[-1]
 section.orientation = WD_ORIENT.LANDSCAPE
 document.add_heading("Chennai Institute Of Technology",0)
-tab_header=["S.NO","yearrr/sem","Date","TimeDuration","Register number","subcode","labvenue","Internal","External"]
+tab_header=["S.NO","year/sem","Date","TimeDuration","Register number","subcode","labvenue","Internal","External"]
 table=document.add_table(rows=1,cols=9)
 for i in range(9):
     table.rows[0].cells[i].text=tab_header[i]
