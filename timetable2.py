@@ -1,11 +1,16 @@
-
-from docx import Document
+import docx
+from docx.shared import Inches
 from docx.enum.section import WD_ORIENT
-import paragraphs
-document=Document()
-section = document.sections[-1]
-section.orientation = WD_ORIENT.LANDSCAPE
-document.add_heading("Chennai Institute Of Technology",0)
+document = docx.Document()
+sections = document.sections
+for section in sections:
+	# change orientation to landscape
+	section.orientation = WD_ORIENT.LANDSCAPE
+
+	new_width, new_height = section.page_height, section.page_width
+	section.page_width = new_width
+	section.page_height = new_height
+document.add_picture('my_timetable/members/static/img/logo.png', width=Inches(6.25))
 tab_header=["S.NO","year/sem","Date","TimeDuration","Register number","subcode","labvenue","Internal","External"]
 table=document.add_table(rows=1,cols=9)
 for i in range(9):
@@ -85,7 +90,7 @@ for z in subcode:
         print("Hello")
     fd = fd + 1
     table.add_row().cells
-
+table.style = 'Table Grid'
 document.save("text1.docx")
 
 
