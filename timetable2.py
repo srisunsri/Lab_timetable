@@ -3,7 +3,7 @@ from docx.shared import Inches
 from docx.enum.section import WD_ORIENT
 document = docx.Document()
 sections = document.sections
-for section in sections:
+for section in sections:05
 	# change orientation to landscape
 	section.orientation = WD_ORIENT.LANDSCAPE
 
