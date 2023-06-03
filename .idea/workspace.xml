@@ -4,15 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3b5f72a4-63c5-403c-a7a8-746c8fc8e7ef" name="Changes" comment="Adding orientaion and Grid">
+    <list default="true" id="3b5f72a4-63c5-403c-a7a8-746c8fc8e7ef" name="Changes" comment="connected frontend and backend">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_timetable/members/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/my_timetable/members/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_timetable/members/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_timetable/members/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_timetable/members/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_timetable/members/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/my_timetable/my_timetable/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_timetable/my_timetable/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/my_timetable/my_timetable/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/my_timetable/my_timetable/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/text1.docx" beforeDir="false" afterPath="$PROJECT_DIR$/text1.docx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/timetable2.py" beforeDir="false" afterPath="$PROJECT_DIR$/timetable2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/text1.docx" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,7 @@
       </set>
     </option>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -221,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685341750714</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="connected frontend and backend">
+      <created>1685451295865</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1685451295865</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -244,6 +247,7 @@
     <MESSAGE value="text file commit" />
     <MESSAGE value="change in index" />
     <MESSAGE value="Adding orientaion and Grid" />
-    <option name="LAST_COMMIT_MESSAGE" value="Adding orientaion and Grid" />
+    <MESSAGE value="connected frontend and backend" />
+    <option name="LAST_COMMIT_MESSAGE" value="connected frontend and backend" />
   </component>
 </project>
