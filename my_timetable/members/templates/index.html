@@ -8,6 +8,7 @@
 
 h3 {text-align: center;}
 h6 {text-align: center;}
+
 .center {
   display: flex;
   justify-content: center;
@@ -17,7 +18,7 @@ h6 {text-align: center;}
       background-color:#F0F09E;
     }
     body {
-      background-color: #ffffff;
+      background-color: #40128B;
       color: black;
       font-size:20px;
     }
@@ -34,26 +35,15 @@ h6 {text-align: center;}
 <br>
 <form action="product" method="POST">
 {% csrf_token %}
+
 <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-3">
 <p>Enter Department</p>
 </div>
 <div class="col-md-3">
-        <select class="form-control custom-text-field" id="dept" name="dept" required>
-          <option value="department1">CSE</option>
-          <option value="department2">IT</option>
-          <option value="department3">AIDS</option>
-          <option value="department4">CSBS</option>
-          <option value="department5">MECH</option>
-          <option value="department6">MCT</option>
-          <option value="department7">EEE</option>
-          <option value="department8">ECE</option>
-          <option value="department9">CIVIL</option>
-          <option value="department10">CS</option>
-          <option value="department11">ML</option>
-        </select>
-  </div>
+               <input class="form-control custom-text-field" id="dept" name="year" required>
+</div>
 </div>
 <div class="col-md-3"></div>
 </div>
@@ -241,7 +231,7 @@ h6 {text-align: center;}
 <div class="row">
       <div class="col-md-3"></div>
       <div class="col-md-3">
-        <p>Enter all subject code with spaces</p>
+        <p>Subject code (with space)</p>
       </div>
       <div class="col-md-3">
         <input type="text" id="subcode" name="subcode" class="form-control custom-text-field">
@@ -253,7 +243,7 @@ h6 {text-align: center;}
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-3">
-      <p>Enter all internal examiner with spaces</p>
+      <p>Internal examiner names (with space)</p>
     </div>
     <div class="col-md-3">
       <input type="text" id="internal" name="internal" class="form-control custom-text-field">
@@ -265,7 +255,7 @@ h6 {text-align: center;}
 <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-3">
-      <p>Enter all external examiner with spaces</p>
+      <p>External examiner names (with space)</p>
     </div>
     <div class="col-md-3">
       <input type="text" id="external" name="external" class="form-control custom-text-field">
@@ -280,6 +270,6 @@ h6 {text-align: center;}
 <button style="background-color:#006699;" type="submit" value="submit" class="btn">Submit</button>
 </div>
   </div>
-</form>
+    </form>
 </body>
 </html>

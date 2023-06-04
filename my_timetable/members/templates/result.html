@@ -61,7 +61,12 @@
           <h1>Result...</h1>
           <form action="render_docx" method="POST">
          {% csrf_token %}
-            <button style="background-color:#006699;" type="submit" value="submit" class="btn">Download</button>
+            <button style="background-color:#006699;" type="submit" value="submit" class="btn">Download for Professors</button>
+        </form>
+          <br>
+          <form action="renderdocx" method="POST">
+         {% csrf_token %}
+            <button style="background-color:#006699;" type="submit" value="submit1" class="btn">Download for Students</button>
         </form>
         </div>
       </div>

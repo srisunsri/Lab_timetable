@@ -5,5 +5,6 @@ from members import views
 urlpatterns = [
     path('', views.members),
     path('product',views.product),
-    path('render_docx',views.render_docx)
+    path('render_docx',views.render_docx),
+    path('renderdocx',views.renderdocx)
 ]
