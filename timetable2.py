@@ -3,7 +3,7 @@ from docx.shared import Inches
 from docx.enum.section import WD_ORIENT
 document = docx.Document()
 sections = document.sections
-for section in sections:05
+for section in sections:
 	# change orientation to landscape
 	section.orientation = WD_ORIENT.LANDSCAPE
 
@@ -43,56 +43,57 @@ while(1):
     elif(c%r<15):
         r=r+1
 
-for z in subcode:
-    i=0
-    frmc = frm
-    toc = to
-    while(frmc<=toc):
-        cells=table.add_row().cells
-        for j in range(9):
-            if(i>=n):
-                i=0
-            if(j==0):
-                cells[0].text=str(sno)
-                sno=sno+1
-            elif(j==1):
-                cells[1].text=sem
-            elif(j==2):
-                k=str(fd)+"-"+str(fm)+"-"+str(fy)
-                cells[2].text=k
-            elif(j==3):
-                if(time%2==1):
-                    cells[3].text=t1
-                    time=0
-                else:
-                    cells[3].text=t2
-                    time=1
-            elif(j==4):
-                if ((frmc <= toc) and (frmc + c + 1 <= toc)):
-                    p=str(frmc)+"- "+str(frmc+c-1)
-                    cells[4].text=p
+if (sem == "I/II" or sem == "I/I"):
+    num = to - frm
+    ro = 2 * (math.ceil(num / c))
+    ro1 = ro / 2
+    for pq in range(len(fd)):
+        i = 0
+        frmc = frm
+        toc = to
+        for ij in range(ro):
+            cells = table.add_rows().cells
+            for j in range(10):
+                if (j == 0):
+                    cells[0].text = str(sno)
+                    sno = sno + 1
+                elif (j == 1):
+                    cells[1].text = sem
+                elif (j == 2):
+                    k = fd[ii]
+                    cells[2].text = k
+                elif (j == 3):
+                    cells[3].text = t3[kk]
+                    kk = (kk + 1) % 4
+                elif (j == 4):
+                    if ((frmc <= toc) and (frmc + c + 1 <= toc)):
+                        p = str(frmc)
+                        u = str(frmc + c - 1)
+                        cells[4].text = p
+                        cells[5].text = u
+                    else:
+                        p = str(frmc)
+                        u = str(toc)
+                        cells[4].text = p
+                        cells[5].text = u
+                elif (j == 6):
+                    if (ij <= ro1):
+                        cells[6].text = subcode[0]
+                    else:
+                        cells[6].text = subcode[1]
 
-                else:
-                    p=str(frmc)+"- "+str(toc)
-                    cells[4].text=p
-            elif(j==5):
-                cells[5].text=z
-            elif(j==6):
-                cells[6].text=lbname[i]
-            elif(j==7):
-                cells[7].text=internal[i]
-            elif(j==8):
-                cells[8].text=external[i]
-            print("H",end=" ")
-        if(time==1):
-            i=i+1
-        frmc = frmc + c
-        print("Hello")
-    fd = fd + 1
-    table.add_row().cells
-table.style = 'Table Grid'
-document.save("text1.docx")
-
+                elif (j == 7):
+                    cells[7].text = lbname[i]
+                elif (j == 8):
+                    cells[8].text = internal[i]
+                elif (j == 9):
+                    cells[9].text = external[i]
+            frmc = frmc + c
+            print("Hello")
+        ii = ii + 1
+        table.add_row().cells
+    table.style = 'Table Grid'
+    document.save("text1.docx")
 
 
 
